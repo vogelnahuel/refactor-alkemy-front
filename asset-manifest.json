@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/refactor-alkemy-front/static/css/main.509f2e8e.css",
-    "main.js": "/refactor-alkemy-front/static/js/main.6dc20ed5.js",
+    "main.css": "/refactor-alkemy-front/static/css/main.8960ee39.css",
+    "main.js": "/refactor-alkemy-front/static/js/main.be7f305c.js",
     "index.html": "/refactor-alkemy-front/index.html",
     "static/media/filter.svg": "/refactor-alkemy-front/static/media/filter.f5f775858b554e084072985e0fbf0db3.svg",
     "static/media/edit.svg": "/refactor-alkemy-front/static/media/edit.5e73e9f8357873c477a861aa22cefa1c.svg",
-    "main.509f2e8e.css.map": "/refactor-alkemy-front/static/css/main.509f2e8e.css.map",
-    "main.6dc20ed5.js.map": "/refactor-alkemy-front/static/js/main.6dc20ed5.js.map"
+    "main.8960ee39.css.map": "/refactor-alkemy-front/static/css/main.8960ee39.css.map",
+    "main.be7f305c.js.map": "/refactor-alkemy-front/static/js/main.be7f305c.js.map"
   },
   "entrypoints": [
-    "static/css/main.509f2e8e.css",
-    "static/js/main.6dc20ed5.js"
+    "static/css/main.8960ee39.css",
+    "static/js/main.be7f305c.js"
   ]
 }
