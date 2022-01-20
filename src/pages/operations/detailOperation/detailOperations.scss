@@ -1,0 +1,22 @@
+.container-buttons-operations{
+    display: flex;
+    justify-content: space-between;
+    min-height: 45vh;
+}
+.margin-top{
+    margin-top: auto;
+}
+.Admin-Pickers-input.readonly{
+    color: #828282;
+    background-color: transparent;
+    cursor: default;
+}
+.label-Admin-Pickers.readonly{
+    color: #828282;
+}
+@media (min-width: 1500px){
+    .container-buttons-operations{
+        min-height: 59vh;
+    }
+
+}

@@ -1,0 +1,171 @@
+%input {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+    letter-spacing: 0.005em;
+    color: #101820;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #828282;
+    width: 100%;
+    cursor: text;
+}
+
+.Admin-Pickers-input {
+    @extend %input;
+}
+.login-button {
+    background-color: rgba(20, 90, 153, 1);
+    border-radius: 50px;
+    width: 233px;
+    height: 50px;
+    background: #145a99;
+    color: white;
+    border: 4px solid #145a99;
+    box-sizing: border-box;
+    padding: 0.375rem 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label-Admin-Pickers.label-login {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 300;
+    transform-origin: 0 0;
+    position: absolute;
+    transition: transform 0.2s ease-in-out;
+    font-size: 17px;
+}
+.login-init{
+    position: relative;
+    z-index: 10;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+
+  }
+.label {
+    position: absolute;
+    margin-top: 0px;
+    left: 0;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 21px;
+    color: #4d4d4d;
+    transform-origin: 0 0;
+    transition: transform 0.2s ease-in-out;
+    display: inline;
+    cursor: text;
+}
+.labelError {
+    color: #ff1515;
+}
+
+.errors {
+    font-family: "Mulish", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    color: #ff1515;
+    z-index: 2;
+}
+
+.login-form {
+    width: 541px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+
+    div {
+        z-index: 2;
+        input {
+            position: relative;
+            z-index: 2;
+        }
+        label {
+            z-index: 3;
+        }
+    }
+}
+.login-a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.login-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    color: #58c1f5;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+.inputError {
+    border: rgba(153, 24, 20, 0);
+    color: #ff1515;
+    border-bottom: 1px solid #ff1515;
+    z-index: 3;
+}
+.inputError::placeholder {
+    color: #ff1515;
+}
+
+.label-login.animationTop {
+    transform: translateY(-1.5em);
+    font-size: 15px;
+}
+.animationOrigin {
+    cursor: text;
+    transform: translateY(0em);
+}
+.inputReboteAnimation {
+    -webkit-animation: inputRebote 0.25s linear;
+    animation: inputRebote 0.25s linear;
+}
+@keyframes inputRebote {
+    0% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    25% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    75% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    100% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+}

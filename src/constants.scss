@@ -1,0 +1,22 @@
+%type-text{
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: normal;
+    color: #101820;
+}
+%input {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+    letter-spacing: 0.005em;
+    color: #101820;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #828282;
+    width: 100%;
+    cursor: text;
+  }
+
