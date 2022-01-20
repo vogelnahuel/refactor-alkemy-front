@@ -100,8 +100,40 @@ nav{
     }
 }
 @media (max-width:1300px){
-
     .circle{
         left: 4.6vw;
     }
+    .navAdmin{
+        width: 165px;
+    }
 }
+@media (max-width:500px){
+
+    .navAdmin{
+        width: 95%;
+    }
+    .circle{
+        left: 11.6vw;
+    }
+}
+
+@media (max-width:1000px){
+
+    .navAdmin{
+        position: static;
+        width: 97%;
+        height: 200px;
+        border: 1px solid #145A99;
+        margin-left: 20px;
+        padding: 0;
+        margin-right: 20px;
+    }
+    .circle{
+        left:9.6vw;
+    }
+}
+
+
+
+
+

@@ -1,44 +1,68 @@
-.display-flex{
-    display: flex;
+.display-flex-container-dashboard {
+  display: flex;
 }
-.pending-container{
-    margin-left: 20.059vw;
-    margin-right: 20px;
+
+.display-flex {
+  display: flex;
+}
+.pending-container {
+  margin-left: 20.059vw;
+  margin-right: 20px;
+  width: 100%;
+  margin-top: 7.291666666666667vh;
+}
+@media (max-width: 1000px) {
+  .display-flex-container-dashboard {
+    display: block;
     width: 100%;
-    margin-top: 7.291666666666667vh;
+  }
+  .pending-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 95%;
+  }
 }
+@media (max-width: 500px) {
+  .display-flex-container-dashboard {
+    display: block;
+    width: 100%;
+  }
 
-.form-fiter{
-    display: flex;
-    background: #FFFFFF;
-    border: 1px solid #E5E5E5;
-    box-sizing: border-box;
-    border-radius: 10px;
-    padding: 30px;
-    margin-top: 3vh;
-    width: 77.965vw;
-
+  .pending-container {
+    width: 88%;
+  }
+}
+.form-fiter {
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 3vh;
+  width: 77.965vw;
 }
 .modalLoading {
-    backdrop-filter: blur(5px);
-    position: fixed;
-    top:0vh;
-    z-index: 99;
-    width: 100vw;
-    height: 100vh;
-    background:  rgba(255, 255, 255, 0.4) url("../../assets/canguro-pickers.gif") 50% 50% no-repeat;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0vh;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.4) url("../../assets/canguro-pickers.gif")
+    50% 50% no-repeat;
 }
-.amountTotalPositive{
-    display: inline;
-    color: rgb(101, 168, 0);
+.amountTotalPositive {
+  display: inline;
+  color: rgb(101, 168, 0);
 }
-.amountTotalNegative{
-    display: inline;
-    color: #ff1515;
+.amountTotalNegative {
+  display: inline;
+  color: #ff1515;
 }
 
-@media (min-width:1800px){
-    .pending-container{
-        margin-left: 17.059vw;
-    }
+@media (min-width: 1800px) {
+  .pending-container {
+    margin-left: 17.059vw;
+  }
 }

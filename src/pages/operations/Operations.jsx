@@ -10,11 +10,11 @@ import TableOperations from "./table/TableOperations";
 export const Operations = ({ Operations, isFetching,getMoreOperations,filters }) => {
 
   return (
-    <div className="display-flex">
+    <div className="display-flex-container-operations">
       <Nav />
       <div className="pending-container">
         <div className="display-flex-operations-subtitle">
-          <h1>Operaciones</h1>
+          <h1 className="margin-operations-title">Operaciones</h1>
           <Link className="operations-link" to="/createOperations">
             Crear Operacion
           </Link>

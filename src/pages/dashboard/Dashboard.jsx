@@ -5,7 +5,7 @@ import "./dashboard.scss";
 
 export const Dashboard = ({ isFetching, dashboard, amountTotal }) => {
   return (
-    <div className="display-flex">
+    <div className="display-flex-container-dashboard">
       <Nav />
       <div className="pending-container">
         <div className="form-fiter">

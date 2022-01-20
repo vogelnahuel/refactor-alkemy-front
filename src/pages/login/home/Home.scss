@@ -169,3 +169,9 @@
         transform: translateX(5px);
     }
 }
+
+@media (max-width:500px){
+    .login-form {
+        width: 300px;
+    }
+}

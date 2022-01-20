@@ -1,3 +1,7 @@
+.display-flex-container-operations{
+  display: flex;
+  width: 100%;
+}
 .display-flex-operations-subtitle {
   display: flex;
   justify-content: space-between;
@@ -7,4 +11,27 @@
 }
 .table-operations-img{
   cursor: pointer;
+}
+.margin-operations-title{
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+@media (max-width:1000px){
+  .display-flex-container-operations{
+      display: block;
+      width: 100%;
+  }
+  .pending-container{
+      width: 97%;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+}
+
+@media (max-width:500px){
+
+  .pending-container{
+      width: 88%;
+  }
 }
