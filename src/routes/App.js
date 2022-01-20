@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {ConnectedRouter} from 'connected-react-router';
 import HomeContainer from "../pages/login/home/HomeContainer";
 import DashboardContainer from "../pages/dashboard/DashboardContainer";
-// import OperationsContainer from "../pages/operations/OperationsContainer";
+import OperationsContainer from "../pages/operations/OperationsContainer";
 // import DetailOperationsContainer from "../pages/operations/detailOperation/DetailOperationsContainer";
 // import CreateOperations from "../pages/operations/createOperation/CreateOperationContainer";
 import store, {history} from '../store'
@@ -17,8 +17,8 @@ export const App = () => {
             <Route
               path="/operations/:id"
               component={DetailOperationsContainer}
-            />
-            <Route path="/operations" component={OperationsContainer} /> */}
+            /> */}
+            <Route path="/operations" component={OperationsContainer} />
             <Route path="/dashboard" component={DashboardContainer} />
             <Route exact path="/" component={HomeContainer} />
             <Route exact  path="/refactor-alkemy-front" component={HomeContainer} />
