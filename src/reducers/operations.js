@@ -18,13 +18,19 @@ export const types = {
   OPERATION_POST_REQUEST: `OPERATION_POST_REQUEST`,
   OPERATION_POST_SUCCESS: `OPERATION_POST_SUCCESS`,
   OPERATION_POST_ERROR: `OPERATION_POST_ERROR`,
+
+  OPERATIONS_GET_MORE_REQUEST: `OPERATIONS_GET_MORE_REQUEST`,
+  OPERATIONS_GET_MORE_SUCCESS: `OPERATIONS_GET_MORE_SUCCESS`,
+  OPERATIONS_GET_MORE_ERROR: `OPERATIONS_GET_MORE_ERROR`,
+
+  SET_FILTERS: `SET_FILTERS`,
 };
 
 export const INITIAL_STATE = {
   fetching: false,
   operations: [],
   filters: {
-    limit: 4,
+    limit: 10,
     offset: 0,
     description: undefined,
     category: undefined,
@@ -100,6 +106,23 @@ export const actions = {
   getOperationsCreateError: () => ({
     type: types.OPERATION_POST_ERROR,
   }),
+
+  getMoreOperationsRequest: (params) => ({
+    type: types.OPERATIONS_GET_MORE_REQUEST,
+    params,
+  }),
+  getMoreOperationsSuccess: (operations) => ({
+    type: types.OPERATIONS_GET_MORE_SUCCESS,
+    operations,
+  }),
+  getMoreOperationsError: () => ({
+    type: types.OPERATIONS_GET_MORE_ERROR,
+  }),
+
+  // setFilter:(filters)=>({
+  //   type:types.SET_FILTERS,
+  //   filters
+  // })
 };
 
 export const selectors = {
@@ -110,7 +133,31 @@ export const selectors = {
 };
 
 const reducer = (state = INITIAL_STATE, action) => {
+
   switch (action.type) {
+
+    case types.OPERATIONS_GET_MORE_REQUEST:
+      return {
+        ...state,
+        fetching: true,
+      };
+    case types.OPERATIONS_GET_MORE_SUCCESS:
+      return {
+        ...state,
+        operations: state.operations.concat(action.operations),
+        filters: {
+          ...state.filters,
+          offset: action.operations.offset + action.operations.limit,
+        },
+        fetching: false,
+
+      };
+    case types.OPERATIONS_GET_MORE_ERROR:
+      return {
+        ...state,
+        fetching: false,
+      };
+
     case types.OPERATIONS_GET_REQUEST:
       return {
         ...state,
@@ -121,6 +168,10 @@ const reducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         fetching: false,
+        filters: {
+          ...state.filters,
+          offset: 10,
+        },
         operations: action.operations,
       };
     case types.OPERATIONS_GET_ERROR:

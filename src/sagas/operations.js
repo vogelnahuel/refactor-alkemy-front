@@ -6,6 +6,7 @@ import { replace } from "connected-react-router";
 
 const sagas = [
   takeLatest(types.OPERATIONS_GET_REQUEST, getOperations),
+  takeLatest(types.OPERATIONS_GET_MORE_REQUEST, getMoreOperations),
   takeLatest(types.OPERATIONS_BY_ID_GET_REQUEST, getOperationsByID),
   takeLatest(types.OPERATION_UPDATE_REQUEST, updateOperation),
   takeLatest(types.OPERATION_DELETE_REQUEST, deleteOperation),
@@ -21,6 +22,16 @@ function* getOperations({ params }) {
     yield put(actions.getOperationsError());
   } else {
     yield put(actions.getOperationsSuccess(response.data));
+  }
+}
+function* getMoreOperations({ params }) {
+
+  const response = yield call(operationsMiddleware.getOperations, params);
+  if (response.status !== 200) {
+    yield put(actions.getMoreOperationsError());
+  } else {
+    
+    yield put(actions.getMoreOperationsSuccess(response.data));
   }
 }
 
@@ -40,7 +51,6 @@ function* updateOperation({ id, params }) {
   if (response.status !== 200) {
     yield put(actions.getOperationsUpdateError());
   } else {
-
     yield put(actions.getOperationsUpdateSuccess());
     yield put(replace("/operations"));
   }
@@ -52,20 +62,18 @@ function* deleteOperation({ id }) {
   if (response.status !== 200) {
     yield put(actions.getOperationsDeleteError());
   } else {
-  
     yield put(actions.getOperationsDeleteSuccess());
     yield put(replace("/operations"));
   }
 }
 
 function* createOperation({ params }) {
-  params.amount = parseInt(params.amount)
+  params.amount = parseInt(params.amount);
   const response = yield call(operationsMiddleware.createOperation, params);
 
   if (response.status !== 200) {
     yield put(actions.getOperationsCreateError());
   } else {
- 
     yield put(actions.getOperationsCreateSuccess());
     yield put(replace("/operations"));
   }

@@ -7,9 +7,8 @@ import { Link } from "react-router-dom";
 import "./operations.scss";
 import TableOperations from "./table/TableOperations";
 
-export const Operations = ({ Operations, isFetching }) => {
+export const Operations = ({ Operations, isFetching,getMoreOperations,filters }) => {
 
-  
   return (
     <div className="display-flex">
       <Nav />
@@ -21,7 +20,8 @@ export const Operations = ({ Operations, isFetching }) => {
           </Link>
         </div>
         <FilterContainer />
-        <TableOperations Operations={Operations}/>
+        <TableOperations filters={filters} Operations={Operations} getMoreOperations={getMoreOperations}/>
+        
        
      
       </div>

@@ -25,6 +25,9 @@ const mapDispatchToProps = (dispatch) => ({
   getOperations: (params) => {
     dispatch(operationsActions.getOperationsRequest(params));
   },
+  getMoreOperations:(params)=>{
+    dispatch(operationsActions.getMoreOperationsRequest(params))
+  }
 });
 
 export default connect(
