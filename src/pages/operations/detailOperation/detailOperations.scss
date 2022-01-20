@@ -3,6 +3,9 @@
     justify-content: space-between;
     min-height: 45vh;
 }
+.display-flex-container-detail{
+    display: flex;
+}
 .margin-top{
     margin-top: auto;
 }
@@ -16,7 +19,12 @@
 }
 @media (min-width: 1500px){
     .container-buttons-operations{
-        min-height: 59vh;
+        min-height: 51vh;
     }
 
+}
+@media (max-width:1000px){
+    .display-flex-container-detail{
+    display: block;
+    }
 }

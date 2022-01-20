@@ -3,3 +3,12 @@
     flex-wrap: wrap;
     width: 100%;
 }
+.display-flex-container-create{
+    display: flex;
+}
+
+@media  (max-width:1000px){
+    .display-flex-container-create{
+        display: block;
+    }
+}

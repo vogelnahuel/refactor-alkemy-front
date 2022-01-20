@@ -16,7 +16,7 @@ export const DetailOperations = ({
    
 
   return (
-    <div className="display-flex">
+    <div className="display-flex-container-detail">
       <Nav />
       <div className="pending-container">
         <h1>Detalle de una operacion Editar / eliminar</h1>

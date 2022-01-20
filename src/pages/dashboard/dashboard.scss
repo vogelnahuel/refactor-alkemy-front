@@ -42,6 +42,11 @@
   margin-top: 3vh;
   width: 77.965vw;
 }
+@media (max-width:1000px){
+  .form-fiter {
+  width: 100%;
+  }
+}
 .modalLoading {
   backdrop-filter: blur(5px);
   position: fixed;

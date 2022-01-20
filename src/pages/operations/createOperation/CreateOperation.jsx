@@ -8,7 +8,7 @@ import './createOperations.scss'
 
 export const CreateOperation = ({ validationSchema,createOperation }) => {
     return (
-        <div className='display-flex'>
+        <div className='display-flex-container-create'>
             <Nav />
             <div className='pending-container'>
                 <h1>Formulario de creacion de operaciones</h1>
